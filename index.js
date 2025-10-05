@@ -16,9 +16,6 @@ const tools = [
 ];
 
 const App = () => {
-  const [profilePicSrc, setProfilePicSrc] = useState('profilepic.jpg');
-  const [isGeneratingImage, setIsGeneratingImage] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -46,41 +43,13 @@ const App = () => {
     };
   }, []);
 
-  const handleImageError = useCallback(async () => {
-    if (isGeneratingImage || profilePicSrc.startsWith('data:image')) {
-      return;
-    }
-
-    setIsGeneratingImage(true);
-    try {
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-      const response = await ai.models.generateImages({
-        model: 'imagen-4.0-generate-001',
-        prompt: 'A minimalist, abstract vector portrait of a software developer. A professional and clean avatar with shades of blue and gray. No text or letters.',
-        config: {
-          numberOfImages: 1,
-          outputMimeType: 'image/jpeg',
-          aspectRatio: '1:1',
-        },
-      });
-
-      const base64ImageBytes = response.generatedImages[0].image.imageBytes;
-      const imageUrl = `data:image/jpeg;base64,${base64ImageBytes}`;
-      setProfilePicSrc(imageUrl);
-    } catch (error) {
-      console.error("Error generating placeholder image:", error);
-    } finally {
-      setIsGeneratingImage(false);
-    }
-  }, [isGeneratingImage, profilePicSrc]);
-
   return (
     <div className="resume-container">
       <aside className="left-column">
         <div className="header fade-in-section">
           <div className="profile-picture-container">
             <img 
-              src={profilePicSrc} 
+              src='./profilepic.jpg' 
               alt="Dinesh Kumar" 
               className="profile-picture" 
               onError={handleImageError}
