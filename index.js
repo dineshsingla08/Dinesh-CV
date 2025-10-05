@@ -50,7 +50,7 @@ const App = () => {
         <div className="header fade-in-section">
           <div className="profile-picture-container">
             <img 
-              src={""} 
+              src="./asset/profilepic.jpg 
               alt="Dinesh Kumar" 
               className="profile-picture" 
             />
