@@ -1,7 +1,5 @@
 // Destructure React hooks and components from the global React object
 const { useEffect, useState, useCallback, StrictMode } = React;
-// Get the GoogleGenAI class from the global object created by the UMD bundle
-const { GoogleGenAI } = window.googleGenai;
 
 const skills = [
   'HTML', 'CSS', 'JAVASCRIPT', 'Bootstrap', 'React JS', 'React Hooks',
@@ -52,7 +50,7 @@ const App = () => {
 
     setIsGeneratingImage(true);
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+      const ai = new window.GoogleGenAI({ apiKey: process.env.API_KEY });
       const response = await ai.models.generateImages({
         model: 'imagen-4.0-generate-001',
         prompt: 'A minimalist, abstract vector portrait of a software developer. A professional and clean avatar with shades of blue and gray. No text or letters.',

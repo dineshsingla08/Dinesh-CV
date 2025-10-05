@@ -14,13 +14,18 @@
   <!-- Load libraries as UMD modules for compatibility with Babel Standalone -->
   <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-  <script src="https://esm.sh/@google/genai?bundle&global-name=googleGenai"></script>
 
   <!-- Babel Standalone for in-browser JSX transpilation -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
   <div id="root"></div>
   
+  <!-- Natively import the GenAI module and expose it on the window object -->
+  <script type="module">
+    import { GoogleGenAI } from "https://esm.sh/@google/genai";
+    window.GoogleGenAI = GoogleGenAI;
+  </script>
+
   <!-- Link to the external React application script to be transpiled by Babel -->
   <script type="text/babel" src="index.js"></script>
 </body>
