@@ -1,6 +1,6 @@
 // Import GoogleGenAI directly from a more stable CDN for ES modules
 import { GoogleGenAI } from "https://cdn.jsdelivr.net/npm/@google/genai/dist/index.mjs";
-import profilePic from  ./asset/profilepic.jpg;
+
 
 // Destructure React hooks and components from the global React object
 const { useEffect, useState, useCallback, StrictMode } = React;
@@ -50,7 +50,7 @@ const App = () => {
         <div className="header fade-in-section">
           <div className="profile-picture-container">
             <img 
-              src={profilePic} 
+              src={""} 
               alt="Dinesh Kumar" 
               className="profile-picture" 
             />
