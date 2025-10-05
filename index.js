@@ -53,7 +53,6 @@ const App = () => {
               alt="Dinesh Kumar" 
               className="profile-picture" 
             />
-            {isGeneratingImage && <div className="spinner"></div>}
           </div>
           <h1>DINESH KUMAR</h1>
           <p>FRONT END DEVELOPER</p>
