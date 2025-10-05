@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 
+
 const skills = [
   'HTML', 'CSS', 'JAVASCRIPT', 'Bootstrap', 'React JS', 'React Hooks',
   'React Redux', 'Typescript', 'SQL', 'Python', 'Node JS', 'JCL',
