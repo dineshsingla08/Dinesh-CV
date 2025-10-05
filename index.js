@@ -1,5 +1,5 @@
-// Import GoogleGenAI directly as we are now in a module context
-import { GoogleGenAI } from "https://esm.sh/@google/genai";
+// Import GoogleGenAI directly from a more stable CDN for ES modules
+import { GoogleGenAI } from "https://cdn.jsdelivr.net/npm/@google/genai/dist/index.mjs";
 
 // Destructure React hooks and components from the global React object
 const { useEffect, useState, useCallback, StrictMode } = React;
