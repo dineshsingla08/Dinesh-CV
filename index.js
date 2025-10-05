@@ -1,3 +1,6 @@
+// Import GoogleGenAI directly as we are now in a module context
+import { GoogleGenAI } from "https://esm.sh/@google/genai";
+
 // Destructure React hooks and components from the global React object
 const { useEffect, useState, useCallback, StrictMode } = React;
 
@@ -50,7 +53,7 @@ const App = () => {
 
     setIsGeneratingImage(true);
     try {
-      const ai = new window.GoogleGenAI({ apiKey: process.env.API_KEY });
+      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
       const response = await ai.models.generateImages({
         model: 'imagen-4.0-generate-001',
         prompt: 'A minimalist, abstract vector portrait of a software developer. A professional and clean avatar with shades of blue and gray. No text or letters.',

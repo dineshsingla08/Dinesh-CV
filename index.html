@@ -20,13 +20,8 @@
 
   <div id="root"></div>
   
-  <!-- Natively import the GenAI module and expose it on the window object -->
-  <script type="module">
-    import { GoogleGenAI } from "https://esm.sh/@google/genai";
-    window.GoogleGenAI = GoogleGenAI;
-  </script>
-
   <!-- Link to the external React application script to be transpiled by Babel -->
-  <script type="text/babel" src="index.js"></script>
+  <!-- data-type="module" allows using ES modules import syntax inside index.js -->
+  <script type="text/babel" data-type="module" src="index.js"></script>
 </body>
 </html>
