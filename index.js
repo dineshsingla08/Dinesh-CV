@@ -72,7 +72,7 @@ const App = () => {
           <h2>SOCIAL</h2>
           <ul className="social-list">
             <li>
-              <a href="https://linkedin.com/in/dinesh-kumar-singla" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+              <a href="https://www.linkedin.com/in/dinesh-singla-3a5496b3/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                 <i className="fab fa-linkedin"></i>
               </a>
             </li>
@@ -82,12 +82,12 @@ const App = () => {
               </a>
             </li>
              <li>
-              <a href="https://www.facebook.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Facebook Profile">
+              <a href="https://www.facebook.com/dineshsingla08/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Profile">
                 <i className="fab fa-facebook"></i>
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
+              <a href="https://www.instagram.com/dinesh_singla08/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
                 <i className="fab fa-instagram"></i>
               </a>
             </li>
