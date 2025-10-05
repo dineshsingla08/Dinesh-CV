@@ -52,7 +52,6 @@ const App = () => {
               src='./profilepic.jpg' 
               alt="Dinesh Kumar" 
               className="profile-picture" 
-              onError={handleImageError}
             />
             {isGeneratingImage && <div className="spinner"></div>}
           </div>
